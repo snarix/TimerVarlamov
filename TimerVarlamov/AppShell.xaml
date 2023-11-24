@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="TimerVarlamov.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:TimerVarlamov"
+    Shell.FlyoutBehavior="Disabled">
+
+    <TabBar>
+        <Tab>
+            <ShellContent Title="Часы"
+                          ContentTemplate="{DataTemplate local:Clock}"
+                          Route="Clock" />
+            <ShellContent Title="Секундомер"
+                          ContentTemplate="{DataTemplate local:StopWatch}"
+                          Route="StopWatch" />
+            <ShellContent Title="Таймер"
+                          ContentTemplate="{DataTemplate local:Timer}"
+                          Route="Timer" />
+            <ShellContent Title="Будильник"
+                          ContentTemplate="{DataTemplate local:AlarmClock}"
+                          Route="AlarmClock" />
+            <ShellContent Title="Напоминалка"
+                          ContentTemplate="{DataTemplate local:Reminder}"
+                          Route="Reminder" />
+
+        </Tab>
+    </TabBar>
+
+</Shell>
