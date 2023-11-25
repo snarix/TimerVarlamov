@@ -1,9 +1,5 @@
-
-
-
-using static Android.InputMethodServices.Keyboard;
-
 namespace TimerVarlamov;
+
 public partial class AlarmClock : ContentPage
 {
     private DateTime now = DateTime.Now;
@@ -29,7 +25,7 @@ public partial class AlarmClock : ContentPage
 
                 await Device.InvokeOnMainThreadAsync(async () =>
                 {
-                    await DisplayAlert("Будильник", "Время прозвенело!", "ОК");
+                    await DisplayAlert("Будильник", "Будильник сработал!", "ОК");
                 });
             }
 
@@ -42,7 +38,7 @@ public partial class AlarmClock : ContentPage
         alarmTime = DateTime.Now.Date + selectedTime;
         isAlarmSet = true;
 
-        Task.Run(() => CheckAlarm());
+        CheckAlarm();
 
     }
 }
